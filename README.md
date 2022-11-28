@@ -11,8 +11,8 @@ Install Git [click here](https://git-scm.com/downloads)
 
 ## Clone This Repositories
 **You can clone with :**
-1. Open Your Teminal in `Visual Studio Code`
-2. Click `CTRL + ` ` or Click Terminal on Toolbar and New Terminal
+1. Open Your Teminal in `**Visual Studio Code**`
+2. Click **CTRL: + `** or Click Terminal on Toolbar and New Terminal
 
 **Or you can go through the visual studio code start page and select clone github**
 
