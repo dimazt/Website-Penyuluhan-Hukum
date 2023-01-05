@@ -1,63 +1,30 @@
-# CodeIgniter 4 Application Starter
+# Installation 
 
-## What is CodeIgniter?
+## Install Composer First
+Install composer [click here](https://getcomposer.org/)
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+## Instal Git
+Install Git [click here](https://git-scm.com/downloads)
+## Execution Policies
+1. Open `Windows PowerShell` with `Run as Administrator`
+2. Run this command: `Set-ExecutionPolicy Unrestricted`
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Clone This Repositories
+**You can clone with :**
+1. Open Your Teminal in `Visual Studio Code`
+2. Click **CTRL: + `** or Click Terminal on Toolbar and New Terminal
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+**Or you can go through the visual studio code start page and select clone github**
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+## Start Server
+1. Open Your Teminal in `Visual Studio Code`
+2. Click `CTRL + ` ` or Click Terminal on Toolbar and New Terminal
+3. Type `php spark serve` on terminal and enter
 
-## Installation & updates
+If program success running, the terminal will display a message like this :
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+`CodeIgniter v4.2.10 Command Line Tool - Server Time: 2022-11-28 10:27:20 UTC-06:00`
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
-
-## Setup
-
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+`CodeIgniter development server started on http://localhost:8080`
+`Press Control-C to stop.`
+`[Tue Nov 29 00:27:21 2022] PHP 8.1.10 Development Server (http://localhost:8080) started `
