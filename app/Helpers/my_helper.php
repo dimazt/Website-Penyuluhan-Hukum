@@ -10,7 +10,7 @@ function get_breadcumb($title1, $title2){
     }else{
         echo '<ol>
         <li><a href="/">Home</a></li>
-        <li>'.$title2.'</li>
+        <li>'.$title1.'</li>
     </ol>
     <h2>'.$title2.'</h2>';
     }

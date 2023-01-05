@@ -10,7 +10,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
+        <div class="carousel-item active" style="background-image: url(assets/img/slide/foto1.png)">
           <div class="carousel-container">
             <div class="carousel-content">
               <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Web Penyuluhan Hukum</span></h2>
@@ -65,22 +65,24 @@
       <div class="col entries">
 
         <div class="row">
-          <?php for($i = 0; $i < 8; $i++) { ?>
+          <?php foreach($pasal as $row) { ?>
+            <!-- Atur jumlah kolom pasal -->
             <div class="col-lg-3 col-md-4 col-sm-6">
             <article class="entry">
 
               <div class="entry-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                <img src="<?= base_url('uploads/thumbnail/'. $row->thumbnail)?>" alt="" class="img-fluid">
               </div>
 
               <h5 class="entry-title">
-                <a href="blog-single.html">Judul Permasalahan</a>
+                <a target="blank" href="<?= base_url('uploads/berkas-pasal/'. $row->path_files) ?>"><?= $row->judul?></a>
               </h5>
+              <p><?= $row->description?></p>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Jamil <?= $i ?></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>Posted</li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="2020-01-01"><?= $row->updatedAt?></time></li>
                 </ul>
               </div>
 

@@ -36,9 +36,19 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/auth/(:any)', 'Auth::authentication/$1');
+$routes->get('/auth/process/(:any)', 'Auth::process/$1');
+
 $routes->get('/users/pengaduan/(:any)', 'Users\Pengaduan::index/$1');
-$routes->get('/auth', 'Auth::login');
+$routes->get('/users/pengaduan/action/(:any)', 'Users\Pengaduan::action/$1');
+$routes->get('/users/tanggapan/', 'Users\Tanggapan::index');
+$routes->post('/users/tanggapan/balasan', 'Users\Tanggapan::balasan');
+
+$routes->get('/lampiran', 'Lampiran::index');
+
 $routes->get('/admin', 'Admin\Home::index');
+$routes->get('/admin/pasal/(:any)', 'Admin\Pasal::index/$1');
+$routes->get('/admin/pasal/process/(:any)', 'Admin\Pasal::process/$1');
 $routes->get('/admin/pengaduan/(:any)', 'Admin\Pengaduan::index/$1');
 
 /*
